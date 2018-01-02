@@ -13,7 +13,152 @@
   </head>
 
   <body>
+		<!--Esta es la pantalla de inicio-->
 
+    <div class="container initial">
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="splash"><img src="assets/images/logo-white.png" class="img-responsive logo-white" alt="Responsive image"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container hidden first-screen">
+      <div class="row">
+        <div class="col-xs-12">
+          <input class="btn btn-init" type="button" value="LOG IN">
+          <input id="btn-singup" class="btn btn-init" type="submit" value="SIGN UP">
+        </div>
+      </div>
+    </div>
+    <div class="container hidden formulario">
+      <div class="row">
+        <div class="col-xs-3">
+          <span><a href="#" id="section1" class="glyphicon glyphicon-chevron-left"></a></span>
+        </div>
+        <div class="col-xs-9">
+          <h1>Sing Up</h1>
+          <p>Join now for free ride credit</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <hr>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-2">
+          <input type="number" name="num" id="demo">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <p class="text-center subparrafo">We'll send a text to verify you phone</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <button type="button" class="btn boton btn-color btn-lg btn-block">Next</button>
+        </div>
+      </div>
+    </div>
+    <div class="container hidden codigo">
+      <div class="row">
+        <div class="col-xs-1">
+          <span><a href="#" id="section2" class="glyphicon glyphicon-chevron-left"></a></span>
+        </div>
+        <div class="col-xs-10">
+          <h2 class="text-center">Verify phone number</h2>
+          <p class="text-center">Join now for free ride credit</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <hr>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-2 col-xs-offset-4">
+          <p>LAB-</p>
+        </div>
+        <div class="col-xs-2">
+          <input id="codigo-number" type="number" name="num" min="0" max="3">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <p class="text-center">Enter the code sent to +52</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 centrado">
+          <input class="btn btn-resend btn-default" type="button" value="Resend code">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <button type="button" class="btn btn-codigo btn-lg btn-block">Next</button>
+        </div>
+      </div>
+    </div>
+    <div class="container hidden formulario2">
+      <div class="row">
+        <div class="col-xs-3">
+          <span><a href="#" id="section3" class="glyphicon glyphicon-chevron-left"></a></span>
+        </div>
+        <div class="col-xs-9">
+          <h1>Sing Up</h1>
+          <p>Join now for free ride credit</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <hr>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 input1">
+          <div class="input-group">
+            <span class="input-group-addon glyphicon glyphicon-user" id="basic-addon1"></span>
+            <input type="text" class="form-control" placeholder="First name Last name" aria-describedby="basic-addon1">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 input2">
+          <div class="input-group">
+            <span class="input-group-addon glyphicon glyphicon-envelope" id="basic-addon1"></span>
+            <input type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="checkbox centrado">
+            <label>
+              <input type="checkbox"> I agree to Lyft'ss <a href="#">Terms of Service</a>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <button type="button" class="btn btn-form btn-lg btn-block">Next</button>
+        </div>
+      </div>
+    </div>
+    <div class="container hidden approved">
+      <div class="row">
+        <div class="col-xs-12">
+          <img src="assets/images/logo-white.png" class="img-responsive logo-white2" alt="Responsive image">
+        </div>
+        <div class="col-xs-12">
+          <img src="assets/images/aprobado.jpg" class="img-responsive chuck" alt="Responsive image">
+        </div>
+      </div>
+    </div>
+
+			</div> <!--row -->
+		</div> <!--container general -->
 
 
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
