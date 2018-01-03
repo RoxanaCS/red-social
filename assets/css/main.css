@@ -1,0 +1,36 @@
+*{
+  margin:  0;
+  padding: 0;
+}
+/*-----Estilos de la pantalla de inicio movil-----*/
+.first-screen{
+  background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../img/initial-screen-movil.jpg) no-repeat;
+  background-size:cover;
+  background-position: center;
+  height: 526px;
+}
+.logo{
+  text-align: center;
+  margin-top: 5em;
+  color: #fff;
+}
+.logop1{
+  font-size: 2em;
+  font
+}
+.form-control{
+  margin-bottom: 1em;
+}
+.loginButtons{
+  padding-top: 12em;
+}
+.btn-init{
+  margin-bottom: 1em;
+  width: 100%;
+  background-color: darkgreen;
+  border: none;
+  color: #fff;
+}
+.iconsLogin{
+  padding-bottom: 4em;
+}
