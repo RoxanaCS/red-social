@@ -35,3 +35,22 @@ function autentificar(event){
 });
 
 }
+//código para añadir publicaciones a la página
+$(document).ready(function(){
+  $('#btn').click(function(){
+    var comentario = $('#comment').val();
+    $('#comment').val("");
+    var contenedor = $('#cont');
+    contenedor.append('<div><p>' + comentario + '</p></div>');
+  })
+})
+
+ //seccion de las publicaciones
+ var ref = firebase.database().ref("User1");
+ ref.once("value")
+  .then(function(snapshot) {
+    var key = snapshot.val();
+    console.log(key);
+    var childKey = snapshot.child("post1/detalle").val();
+    console.log(childKey);
+  });
