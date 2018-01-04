@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>red-social</title>
+
     <!-- Latest compiled and minified CSS -->
 		<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -14,37 +15,36 @@
   </head>
 
   <body>
-    <!--Esta es la pantalla de inicio movil-->
+    <!--Esta es la pantalla de inicio MOVIL-->
     <div class="container first-screen">
       <div class="row">
         <!-- logo -->
-				<div class="col-xs-12 logo">
-					<p class="logop1">Wild Travel</p>
-					<p class="logop2">Chile</p>
+				<div class="col-xs-12 col-sm-12 logo">
+          <img src="assets/img/logo.png" alt="logo">
 				</div>
 
         <!--FORMULARIO DE AUTENTICACIÓN-->
         <form id="form-autenticacion">
           <!-- botones login -->
-          <div class="col-xs-12 loginButtons">
+          <div class="col-xs-12 col-sm-12 loginButtons">
         	 <!-- input email -->
-            <div class="col-xs-12">
+            <div class="col-xs-12 col-sm-12">
               <input id="email" class="form-control" type="text" name="email" placeholder="Email" value="">
             </div>
             <!-- input password -->
-            <div class="col-xs-12">
+            <div class="col-xs-12 col-sm-12">
               <input id="password" class="form-control" type="password" name="password" placeholder="Contraseña" value="">
             </div>
-            <!-- boton1
-            <div class="col-xs-12">
-          	 <input id="btnLogin" class="btn btn-init btn1" type="button" value="Login">
-            </div> -->
+            <!-- boton1-->
+            <div class="col-xs-12 col-sm-12">
+          	 <input id="btnLogin" class="btn btn-init btn1" type="button" value="Registrarse">
+            </div> 
       		<!-- boton2 -->
-      		  <div class="col-xs-12">
-      			 <input id="btnSingup" class="btn btn-init btn2" type="submit" value="Registrarse">
+      		  <div class="col-xs-12 col-sm-12">
+      			 <input id="btnSingup" class="btn btn-init btn2" type="submit" value="Login">
       		  </div>
       		  <!-- boton3
-      		  <div class="col-xs-12">
+      		  <div class="col-xs-12 col-sm-12">
       			 <input id="btnLogout" class="btn btn-init btn3" type="submit" value="Logout">
       		  </div> -->
       	 </div>
@@ -53,12 +53,102 @@
       </div><!--row-->
 		</div><!-- first-screen -->
 
-		<!--Esta es la pantalla de inicio desktop-->
+		<!--Esta es la pantalla de inicio DESKTOP-->
+    <div class="container first-screen-desktop">
+      <div class="row">
+        <div class="col-md-12 col-lg-12">
+    <!--Aquí va la definición de la red social lado izquierdo-->
+          <div class="col-md-6 col-lg-6 desktopLeft">
+            <div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+            
+            <h4>Wild travel Chile, la red social de los viajeros outdoors.</h4>
+            <p>Descubre, explora y comparte las mejores rutas de trekking a nivel nacional.</p>
+            <p>¿Cómo funciona?</p>
+            
+            <h3><i class="fa fa-compass" aria-hidden="true"></i>Comparte tus experiencias</h3>
+            <p>Usa Wild Travel Chile cada vez que recorras rutas y muestra a otros usuarios lo que haces.</p>
+            <h3><i class="fa fa-map-o" aria-hidden="true"></i>Explora nuevas rutas</h3>
+            <p>Encuentra lugares únicos desde el norte al sur de Chile.</p>
+            <h3><i class="fa fa-user-circle-o" aria-hidden="true"></i>Sigue a otros viajeros</h3>
+            <p>Busca a tus amigos y descubre a otros entusiastas del trekking.</p>
+            
+            </div>
+          </div>
+    
+    <!--Aquí va el formulario lado derecho-->
+          <div class="col-md-6 col-lg-6 desktopRigth">
+            <!--Logo-->
+            <div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+              <img src="assets/img/logo.png" alt="logo" class="logoDesktop">
+            </div>
+            <!--Bajada-->
+            <div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+              <h4>Regístrate para descubrir y compartir experiencias outdoors.</h4>
+            </div>
+            <!--Formulario-->
+            <div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+              
+              <form id="form-autenticacion">
+                <!-- botones login -->
+                <div class="col-xs-12 col-sm-12 loginButtons">
+                  <!-- input email -->
+                  <div class="col-xs-12 col-sm-12">
+                    <input id="email" class="form-control" type="text" name="email" placeholder="Email" value="">
+                  </div>
+                  <!-- input password -->
+                  <div class="col-xs-12 col-sm-12">
+                    <input id="password" class="form-control" type="password" name="password" placeholder="Contraseña" value="">
+                  </div>
+                  <!-- boton1 -->
+                  <div class="col-xs-12 col-sm-12">
+                    <input id="btnLogin" class="btn btn-init btn1" type="button" value="Registrarse">
+                  </div> 
+                  <!-- boton2 -->
+                  <div class="col-xs-12 col-sm-12">
+                    <input id="btnSingup" class="btn btn-init btn2" type="submit" value="Login">
+                  </div>
+                  <!-- boton3
+                    <div class="col-xs-12 col-sm-12">
+                      <input id="btnLogout" class="btn btn-init btn3" type="submit" value="Logout">
+                    </div> -->
+                </div>
+              </form>
+            </div>
 
-    <!--Aquí va el perfil del usuario-->
-		<div class="container userProfile">
 
-		</div>
+
+          </div>          
+        </div>
+      
+      </div><!--row-->
+    </div><!--Container-->
+    
+    <!--Aquí va el perfil del usuario movil-->
+		<div class="container userProfileMovil">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 perfirMovil">
+          <h3 class="perfilMovilTitle">Perfil</h3>
+        </div>
+        
+        <div class="col-xs-4 col-sm-4">
+          <div class="col-xs-4 col-sm-4">
+            <!--Aquí va la imagen del usuario-->
+          </div>
+          <div class="col-xs-8 col-sm-8">
+            <!--Aquí el nombre del usuario-->
+          </div>
+        </div>
+        
+        <div class ="col-xs-12 col-sm-12">
+          <ul class="nav nav-tabs">
+            <li role="presentation"><a href="#">Seguidos</a></li>
+            <li role="presentation"><a href="#">Seguidores</a></li>
+          </ul>
+        </div>
+
+      </div><!--row-->
+    </div><!--container-->
+
     <!--Esta es la pantalla de las publicaciones (newsfeed)-->
     <div class="container newsfeed">
       <div class="row">

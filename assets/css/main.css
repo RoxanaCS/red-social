@@ -11,18 +11,13 @@
 }
 .logo{
   text-align: center;
-  margin-top: 5em;
-  color: #fff;
-}
-.logop1{
-  font-size: 2em;
-  font
+  padding-top: 2em;
 }
 .form-control{
   margin-bottom: 1em;
 }
 .loginButtons{
-  padding-top: 12em;
+  padding-top: 6em;
 }
 .btn-init{
   margin-bottom: 1em;
@@ -31,8 +26,41 @@
   border: none;
   color: #fff;
 }
-.iconsLogin{
-  padding-bottom: 4em;
+
+/*-----Estilos de la pantalla de inicio desktop-----*/
+.first-screen-desktop{
+  background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../img/initial-screen.jpg) no-repeat;
+  background-size:cover;
+  background-position: center;
+  width: 100%;
+  height: 700px;
+  color: #fff;
+}
+.desktopLeft{
+  padding-top: 5em;
+}
+.desktopRigth{
+  text-align: center;
+  padding-top: 5em;
+}
+.logoDesktop{
+  width: 40%;
+}
+
+/*-----Estilos delperfil de usuario mobile-----*/
+.userProfileMovil{
+  height: 526px;
+}
+.perfirMovil{
+  text-align: center;
+  color: #fff;
+  background-color: darkgreen;
+  vertical-align: center;
+  
+}
+.perfilMovilTitle{
+  font-size: 1.2em;
+  padding-bottom: 0.2em;
 }
 span{
   font-size: 2em;
