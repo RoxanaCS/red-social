@@ -170,8 +170,8 @@
         <!-- buscador por region -->
       <div class="row">
        <div class="col-xs-12">
-         <select class="form-control" id="food-menu">
-           <option value="Seleccion">Dónde será tu próxima aventura?</option>
+         <select class="form-control" id="region-menu">
+           <option value="Seleccion">¿Qué región estás buscando?</option>
            <option value="Arica">XV - Arica y Parinacota</option>
            <option value="Tarapaca">I - Tarapacá</option>
            <option value="Antofagasta">II - Antofagasta</option>
@@ -190,13 +190,12 @@
          </select>
        </div>
      </div>
-      <!-- contenedor comentarios -->
+      <!-- mostrar publicaciones subidas a firebase -->
       <div class="row">
         <div class="col-xs-12">
-          <div id="cont"></div>
+          <div id="divImg"></div>
         </div>
       </div>
-
       <div class="row">
         <div class="col-xs-12">
           <hr>
@@ -205,25 +204,64 @@
       <div class="footer">
         <div class="row">
           <div class="col-xs-2 col-xs-offset-3">
-            <a href="#modal1" class="btn" data-toggle="modal"><span><i class="fa fa-camera" aria-hidden="true"></i></span></a>
+            <a href="#modal-post" class="btn" data-toggle="modal"><span><i class="fa fa-camera" aria-hidden="true"></i></span></a>
           </div>
           <!-- modal para ingresar la experiencia -->
-          <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="modal1Label">
+          <div class="modal fade" id="modal-post" tabindex="-1" role="dialog" aria-labelledby="modal-postLabel">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
                   <button tyle="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="modal-body">
-                  <!-- Sección textarea, botón y contenedor mensajes -->
-                	<div class="row">
-                    <div class="col-xs-12">
+                  <!--selector de regiones-->
+                  <div class="row">
+                   <div class="col-xs-12">
+                     <select class="form-control" id="region-menu-modal">
+                       <option value="Seleccion">¿Qué región visitaste?</option>
+                       <option value="Arica">XV - Arica y Parinacota</option>
+                       <option value="Tarapaca">I - Tarapacá</option>
+                       <option value="Antofagasta">II - Antofagasta</option>
+                       <option value="Atacama">III - Atacama</option>
+                       <option value="Coquimbo">IV - Coquimbo</option>
+                       <option value="Valparaíso">V - Valparaíso</option>
+                       <option value="Ohhigins">VI - O'Higgins</option>
+                       <option value="Maule">VII - Maule</option>
+                       <option value="Biobio">VIII - Biobío</option>
+                       <option value="Araucania">IX - Araucanía</option>
+                       <option value="LosRios">XIV - Los Ríos</option>
+                       <option value="LosLagos">X - Los Lagos</option>
+                       <option value="Aysen">XI - Aysén</option>
+                       <option value="Magallanes">XII - Magallanes</option>
+                       <option value="Metropolitana">RM - Metropolitana de Santiago</option>
+                     </select>
+                   </div>
+                 </div>
+                  <!--textarea para escribir la publicación-->
+                  <div class="row">
+                    <div class="col-xs-6">
                       <textarea class="txt" id="comment" placeholder="Cuéntanos tu experiencia..."></textarea>
                     </div>
+                  <!--región de muestra de la imagen-->
+                    <div class="col-xs-6 text-center">
+                      <span id="fileSelector">
+                        <label class="btnUpload btn-default" for="upload-file-selector">
+                          <input id="upload-file-selector" type="file" accept="image/x-png, image/gif, image/jpeg">
+                          <i class="fa fa-upload" aria-hidden="true"></i>Subir Imagen
+                        </label>
+                      </span>
+                    </div>
                   </div>
+                  <!-- para seleccionar la imagen-->
                   <div class="row">
-                    <div class="col-xs-12">
-                      <button type="submit" id="btn">Agregar</button>
+                    <div class="col-xs-12 text-center">
+                      <img id="imgLoad" src="img/no-image.png" alt="">
+                    </div>
+                  </div>
+                <!-- para cargar la imagen a firebase-->
+                  <div class="row">
+                    <div class="col-xs-3 col-xs-offset-9">
+                      <button class="btnData btn-primary" type="button" name="button">Agregar dato</button>
                     </div>
                   </div>
                 </div>
@@ -242,5 +280,6 @@
 	<script src="https://use.fontawesome.com/e93f958285.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="assets/js/app.js"></script>
+  <script src="assets/js/redimensionar.js"></script>
   </body>
 </html>

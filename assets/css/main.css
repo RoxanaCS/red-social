@@ -66,7 +66,7 @@ span{
   font-size: 2em;
 }
 textarea {
-	width: 70%;
+	width: 100%;
 	height: 4em;
 	color: #4E4D53;
 	font-size: 15px;
@@ -75,8 +75,12 @@ textarea {
 	border: none;
 	margin: 0 auto;
 }
+#imgLoad{
+  width: 25em;
+  margin-bottom: 1em;
+}
 
-/* Estilos botón agregar */
+/* Estilos botón agregar
 #btn {
 	background-color: #66AEC7;
 	border: 0px;
@@ -97,7 +101,7 @@ textarea {
 	outline: none;
 }
 
-/* Estilos contenedor comentarios */
+/* Estilos contenedor comentarios
 #cont {
 	border-radius: 0.4em;
 	width: 51em;
@@ -121,4 +125,31 @@ textarea {
 p {
 	display: inline-block;
 	margin-left: 0.5em;
+}
+*/
+.btnUpload {
+  border: 0.1em solid gray;
+  color: gray;
+  background-color: white;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  font-size: 0.5em;
+  font-weight: bold;
+}
+.btnUpload input[type=file] {
+  font-size: 10em;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+.btnData{
+  border: 0.1em solid gray;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  font-size: 1em;
+  font-weight: bold;
+}
+.footer{
+
 }
