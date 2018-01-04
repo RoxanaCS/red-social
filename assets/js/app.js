@@ -79,7 +79,23 @@ function registrar(){
 	//}
 //});
 
-
+//para subir foto de perfil
+var urlPerfil = 'none';
+var imgDataPerfil = firebase.database().ref('usuarios');
+$('#upload-file-perfil').change(function(){
+	if(this.files && this.files[0]){
+		var archivo = new FileReader();
+			archivo.onload = function(e){
+				urlPerfil = e.target.result;
+				imgDataPerfil.push({
+					urlPerfil:e.target.result
+				});	
+			//Visualizar la imagen en la etiqueta img
+			$('#imgPerfil').attr('src',urlPerfil);
+		};
+		archivo.readAsDataURL(this.files[0]);
+	}
+});
 
 //para subir imagenes a la web
 var urlLarge = 'none';
