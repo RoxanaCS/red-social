@@ -123,8 +123,20 @@ imgData.on('value', function(snapshot){
     var Objeto = e.val();
     //console.log(Objeto.urlLarge);
     if(Objeto.urlLarge!=null){
-      $("#divImg").append('<div class="col-xs-12"><p>' + Objeto.user + '</p><h4>' + Objeto.comentario + '</h4><img class="col-xs-12 img-thumbnail" height="10%" width="10%" src="' + Objeto.urlLarge + '"/></div>')
+      $("#divImg").append('<div class="col-xs-12 box-post"><p class="col-xs-6 color-user">' + Objeto.user + '</p><button id="btnFollow" class="col-xs-3 btnSeguir" type="button" name="button">' + 'Seguir' + '</button><h4 class="col-xs-12">' + Objeto.comentario + '</h4><img class="col-xs-12 img-thumbnail margen-img" src="' + Objeto.urlLarge + '"/></div>')
     }
+  })
+})
+//para añadir Seguidos
+imgData.on('value', function(snapshot){
+  //$('#div-follow').html(''); //limpiamos el contenedor
+  snapshot.forEach(function(e){
+    var Objeto = e.val();
+    console.log(Objeto.user);
+    $('#btnFollow').click(function(){
+      var divFollow = $('#div-follow');
+      divFollow.append('<div class="col-xs-12"><h3>' + Objeto.user + '</h3></div>')
+    })
   })
 })
 //filtro por region
@@ -143,24 +155,3 @@ $("#region-menu").on('input', function(){
     })
   });
 });
-
-//código para añadir publicaciones a la página
-/*$(document).ready(function(){
-  $('#btn').click(function(){
-    var comentario = $('#comment').val();
-    $('#comment').val("");
-    var contenedor = $('#cont');
-    contenedor.append('<div><p>' + comentario + '</p></div>');
-  })
-})*/
-
- //seccion de las publicaciones
-/* var ref = firebase.database().ref("User1");
- ref.once("value")
-  .then(function(snapshot) {
-    var key = snapshot.val();
-    console.log(key);
-    var childKey = snapshot.child("post1/detalle").val();
-    console.log(childKey);
-  });
-  */

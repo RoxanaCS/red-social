@@ -60,8 +60,24 @@
   font-size: 1.2em;
   padding-bottom: 0.2em;
 }
+header{
+  position: fixed;
+  z-index: 5;
+  background-color: #fff;
+}
+section{
+  margin-top: 6em;
+}
+footer{
+
+}
+#logo-verde{
+  width: 45%;
+  text-align: center;
+}
 span{
-  font-size: 2em;
+  font-size: 3em;
+  color: darkgreen;
 }
 textarea {
 	width: 100%;
@@ -77,61 +93,32 @@ textarea {
   width: 25em;
   margin-bottom: 1em;
 }
-
-/* Estilos botón agregar
-#btn {
-	background-color: #66AEC7;
-	border: 0px;
-	cursor: pointer;
-	text-align: center;
-	margin: 3em auto;
-	width: 130px;
-	height: 30px;
-	display: block;
-	color: #FFF;
+.newsfeed{
+  background-color: #E1F0EB;
 }
-
-#btn:hover {
-	background-color: #5590A6;
+.box-post{
+  background-color: #fff;
+  border: 1px solid #E1F0EB;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+  padding: 1em;
 }
-
-#btn:focus, textarea:focus{
-	outline: none;
+/* clase que se le agrega a la imagen en el newsfeed para separar las publicaciones*/
+.margen-img{
+  margin-top: 1em;
+  margin-bottom: 2em;
 }
-
-/* Estilos contenedor comentarios
-#cont {
-	border-radius: 0.4em;
-	width: 51em;
-	margin: 0 auto;
-	color: #4E4D53;
-	text-align: left;
-	margin-bottom: 6em;
+.color-user{
+  color: #0F7C5A;
+  font-weight: bold;
 }
-
-#cont span {
-	margin-left: 1em;
-}
-
-#cont div {
-	padding: 1em 0.5em;
-	margin-bottom: 2em;
-	outline: 0.1em solid #E5E3F2;
-	background-color: #FFF;
-}
-
-p {
-	display: inline-block;
-	margin-left: 0.5em;
-}
-*/
 .btnUpload {
   border: 0.1em solid gray;
   color: gray;
   background-color: white;
   padding: 0.5em 1em;
   border-radius: 0.5em;
-  font-size: 0.5em;
+  font-size: 30%;
   font-weight: bold;
 }
 .btnUpload input[type=file] {
@@ -148,6 +135,10 @@ p {
   font-size: 1em;
   font-weight: bold;
 }
-.footer{
-
+.btnSeguir{
+  border: 0.1em solid gray;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  font-size: 0.8em;
+  font-weight: bold;
 }
