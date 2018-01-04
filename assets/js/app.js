@@ -11,6 +11,7 @@
   };
   firebase.initializeApp(config);
 
+//Esto es para autenticar un usuario registrado
 window.onload = inicializar;
 var formAutenticacion;
 var userLoged = 'none';
@@ -28,15 +29,58 @@ function autentificar(event){
 	console.log(contrasena);
 	firebase.auth().signInWithEmailAndPassword(usuario, contrasena)
 	.then(function(result){
-		alert("Autenticación correcta");
+		//alert("Autenticación correcta");
+		$('.first-screen').addClass('hidden');
+  	$('.newsfeed').removeClass('hidden');
     userLoged = usuario;
 	})
 	//Esto es en caso de error
 	.catch(function(error) {
   		alert("No se ha realizado la autenticación correctamente");
 });
+}
+
+//Esto es para crear un usuario
+function registrar(){
+	var emailReg = document.getElementById("emailRegistro").value;
+	var passwordReg = document.getElementById("passwordRegistro").value;
+
+	firebase.auth().createUserWithEmailAndPassword(emailReg, passwordReg)
+		.then(function(result){
+			console.log(emailReg);
+		//alert("Autenticación correcta");
+		$('#myModal').modal('hide');
+		$('.first-screen').addClass('hidden');
+  	$('.userProfileMovil').removeClass('hidden');
+    userLoged = usuario;
+	})
+	//Esto es en caso de error
+	.catch(function(error) {
+  		  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // ...
+});
 
 }
+
+
+
+//var ref = new Firebase("https://red-social-f9af1.firebaseio.com");
+//var user = {
+	//email:
+	//password:
+//};
+//ref.createUser(user, function(error){
+	//if (error){
+		//console.log(error);
+	//} else {
+		//console.log("Tu usuario se ha registrado");
+	//}
+//});
+
+
+
 //para subir imagenes a la web
 var urlLarge = 'none';
 $('#upload-file-selector').change(function(){
