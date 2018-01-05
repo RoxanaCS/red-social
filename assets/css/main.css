@@ -4,20 +4,43 @@
 }
 /*-----Estilos de la pantalla de inicio movil-----*/
 .first-screen{
-  background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../img/initial-screen-movil.jpg) no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../img/initial-screen.jpg) no-repeat;
   background-size:cover;
   background-position: center;
-  height: 526px;
+  height: 700px;
+  width: 100%;
+  color: #fff;
 }
-.logo{
-  text-align: center;
-  padding-top: 2em;
+/*-----Estilos primera columna-----*/
+.firstCol{
+  border-right: 0.1em solid #fff;
+  margin-top: 8em;
+  padding-left: 8em;
+  padding-right: 3em;
+}
+.txtcol{
+  font-size: 1.2em;
+}
+/*-----Estilos segunda columna-----*/
+.secondCol{
+  padding-left: 8em;
+}
+#form-autenticacion{
+  padding-top: 4em;
+}
+.logoCol{
+  padding-top: 4em;
+  padding-left: ;
+}
+.logoColXs{
+  padding-top: 3em;
+  padding-left: 1em;
 }
 .form-control{
   margin-bottom: 1em;
 }
 .loginButtons{
-  padding-top: 6em;
+  padding-top: ;
 }
 .btn-init{
   margin-bottom: 1em;
@@ -27,25 +50,6 @@
   color: #fff;
 }
 
-/*-----Estilos de la pantalla de inicio desktop-----*/
-.first-screen-desktop{
-  background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../img/initial-screen.jpg) no-repeat;
-  background-size:cover;
-  background-position: center;
-  width: 100%;
-  height: 700px;
-  color: #fff;
-}
-.desktopLeft{
-  padding-top: 5em;
-}
-.desktopRigth{
-  text-align: center;
-  padding-top: 5em;
-}
-.logoDesktop{
-  width: 40%;
-}
 
 /*-----Estilos delperfil de usuario mobile-----*/
 .userProfileMovil{
