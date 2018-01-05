@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>red-social</title>
-
     <!-- Latest compiled and minified CSS -->
 		<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -22,7 +21,6 @@
           <h4><strong>Wild travel Chile, la red social de los viajeros outdoors.</strong></h4>
           <p class="txtcol">Descubre, explora y comparte las mejores rutas de trekking a nivel nacional.</p><br>
           <h4><strong>¿Cómo funciona?</strong></h4>
-
           <div class="row">
             <div class="col-md-1 col-lg-1">
               <i class="fa fa-compass" aria-hidden="true"></i>
@@ -32,7 +30,6 @@
               <p class="txtcol">Usa Wild Travel Chile cada vez que recorras rutas y muestra a otros usuarios lo que haces.</p>
             </div>
           </div>
-
           <div class="row">
             <div class="col-md-1 col-lg-1">
               <i class="fa fa-map-o" aria-hidden="true"></i>
@@ -83,7 +80,7 @@
             <!-- PREGUNTA -->
             <div class="row">
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8">
-                <p class="before-after-whiteLines text-center">¿No tienes cuenta?</p>
+                <p class="text-center">¿No tienes cuenta?</p>
               </div>
             </div>
             <!-- BOTON 1 -->
@@ -133,20 +130,39 @@
             </div>
           </form>
         </div> <!--segunda columna -->
-
       </div><!--row general-->
     </div>
 
+      </div><!--row general-->  
+    </div> 
 
 
-    <!--Aquí va el perfil del usuario -->
-		<div class="container userProfileMovil">
+    <!--AQUÍ VA EL PERFIL DEL USUARIO -->
+		<div class="container-fluid userProfileMovil">
       <div class="row">
-        <div class="col-xs-3 col-sm-3  perfirMovil">
+       
+       <!--BOTON CERRAR SESION -->
+
+        
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <img src="assets/img/logo-verde.png" alt="logo" class="logoVerdePerfil">
+
+          <hr>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6 col-xs-offset-6  col-sm-6 col-sm-offset-6 col-md-6 col-md-offset3 col-lg-6 col-lg-offset-6 perfirMovil">
           <h3 class="perfilMovilTitle">Mi Perfil</h3>
         </div>
+
+
+        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 perfirMovil">
+          <input id="upload-file-perfil" type="file" accept="image/x-png, image/gif, image/jpeg">
+        </div>
+
       </div><!--row-->
       <div class="row">
+
         <div class="col-xs-12 text-center" id="profile">
           <img id="imgPerfil" src="img/no-image.png" class="img-thumbnail" alt="">
         </div>
@@ -161,13 +177,20 @@
           </div>
         </div>
 
+
+        <div class="col-xs-4 col-xs-offset-4 col-sm-4 col-sm-offset-4 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center">
+          <img id="imgPerfil" src="img/no-image.png" class="img-thumbnail" alt="">
+        </div>
+      </div> 
+      <div class="row">
+
         <div class ="col-xs-12 col-sm-12">
           <ul class="nav nav-tabs">
-            <li role="presentation"><a href="#">Seguidos</a></li>
-            <li role="presentation"><a href="#">Seguidores</a></li>
+            <li role="presentation"><a href="#">Seguidos<i class="fa fa-heart" aria-hidden="true"></i></a></li>
+            <li role="presentation"><a href="#">Seguidores<i class="fa fa-heart" aria-hidden="true"></i></a></li>
           </ul>
         </div>
-
+      </div>
 
     </div><!--container-->
 

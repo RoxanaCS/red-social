@@ -30,9 +30,7 @@
 }
 .logoCol{
   padding-top: 4em;
-
 }
-
 .form-control{
   margin-bottom: 1em;
 }
@@ -51,8 +49,12 @@
 }
 
 /*-----Estilos delperfil de usuario movil-----*/
+.logoVerdePerfil{
+  padding-top: 2em;
+  width: 6%;
+}
 .userProfileMovil{
-  height: 526px;
+  height: 700px;
 }
 .perfirMovil{
   color: #fff;
