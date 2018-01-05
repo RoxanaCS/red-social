@@ -20,7 +20,7 @@
       <div class="row">
         <div class="hidden-xs hidden-sm col-md-5 col-lg-5 firstCol">
           <h4><strong>Wild travel Chile, la red social de los viajeros outdoors.</strong></h4>
-          <p class="txtcol">Descubre, explora y comparte las mejores rutas de trekking a nivel nacional.</p><br>
+          <p class="txtcol">Descubre, explora y comparte las mejores experiencias a nivel nacional.</p><br>
           <h4><strong>¿Cómo funciona?</strong></h4>
 
           <div class="row">
@@ -29,7 +29,7 @@
             </div>
             <div class="col-md-11 col-lg-11">
               <h4>Comparte tus experiencias</h4>
-              <p class="txtcol">Usa Wild Travel Chile cada vez que recorras rutas y muestra a otros usuarios lo que haces.</p>
+              <p class="txtcol">Usa Wild Travel Chile cada vez que recorras paisajes de Chile y muestra a otros usuarios lo que haces.</p>
             </div>
           </div>
 
@@ -48,7 +48,7 @@
             </div>
             <div class="col-md-11 col-lg-11">
               <h4>Sigue a otros viajeros</h4>
-              <p class="txtcol">Busca a tus amigos y descubre a otros entusiastas del trekking.</p>
+              <p class="txtcol">Busca a tus amigos y descubre a otros entusiastas del outdoor.</p>
             </div>
           </div>
         </div><!-- fin primera columna -->
@@ -93,16 +93,15 @@
                   <!-- MODAL -->
                   <div id="myModal" class="modal fade" role="dialog">
                     <div class="modal-dialog">
-                      <!-- MODAL CONTENT -->
+
+                      <!-- Modal content-->
                       <div class="modal-content">
-                        <!-- MODAL HEADER -->
                         <div class="modal-header">
                           <button type="button" class="close" data-dismiss="modal">&times;</button>
-                          <img src="assets/img/logo-verde.png" alt="logo">
+                          <h4 class="modal-title">Regístrate aquí</h4>
+                          <img class="center-block" src="assets/img/logo-verde.png" alt="logo">
                         </div>
-                        <!-- MODAL BODY -->
                         <div class="modal-body">
-                          <!-- FORMULARIO MODAL -->
                           <form>
                             <div class="form-group">
                               <input type="email" class="form-control" id="emailRegistro" placeholder="Email">
@@ -110,19 +109,17 @@
                             <div class="form-group">
                               <input type="password" class="form-control" id="passwordRegistro" placeholder="Password">
                             </div>
-                            <!-- <div class="form-group">
-                              <label for="exampleInputFile">Ingresa una imagen de perfil</label>
-                              <input type="file" id="exampleInputFile">
-                              <p class="help-block">si deseas puedes hacerlo después.</p>
-                            </div>
-                            <div class="checkbox">
-                              <label>
-                                <input type="checkbox"> Check me out
+                            <span id="fileSelector">
+                              <label class="btnProfile btn-default" for="upload-profile">
+                                <input id="upload-profile" type="file" accept="image/x-png, image/gif, image/jpeg">
+                                <i class="fa fa-upload" aria-hidden="true"></i>Sube tu foto de perfil
                               </label>
-                            </div> -->
+                            </span>
+                            <div>
+                              <textarea id="description" placeholder="Cuéntanos algo sobre ti..."></textarea>
+                            </div>
                           </form>
                         </div>
-                        <!-- MODAL FOOTER -->
                         <div class="modal-footer">
                           <button type="reset" class="btn btn-default" id="botonEnviar" onclick="registrar()">Enviar</button>
                         </div>
@@ -133,56 +130,34 @@
             </div>
           </form>
         </div> <!--segunda columna -->
-
       </div><!--row general-->
     </div>
-
-
-
     <!--Aquí va el perfil del usuario -->
-		<div class="container userProfileMovil">
+		<div class="container-fluid userProfileMovil hidden">
       <div class="row">
-        <div class="col-xs-3 col-sm-3  perfirMovil">
-          <h3 class="perfilMovilTitle">Mi Perfil</h3>
+        <div class="col-xs-12 col-md-12 perfirMovil">
+          <h3 class="perfilMovilTitle text-center">Mi Perfil</h3>
+        </div>
+        <div class="col-xs-3 col-md-4">
+          <a id="homeLink" href="#"><span><i class="fa fa-spinner" aria-hidden="true"></i></span></a>
         </div>
       </div><!--row-->
       <div class="row">
-        <div class="col-xs-12 text-center" id="profile">
-          <img id="imgPerfil" src="img/no-image.png" class="img-thumbnail" alt="">
-        </div>
+        <div class="col-xs-12" id="profile"></div>
       </div>
-
-        <div class="col-xs-12 col-sm-12">
-          <div class="col-xs-4 col-sm-4">
-            <!--Aquí va la imagen del usuario-->
-          </div>
-          <div class="col-xs-8 col-sm-8">
-            <!--Aquí el nombre del usuario-->
-          </div>
-        </div>
-
-        <div class ="col-xs-12 col-sm-12">
-          <ul class="nav nav-tabs">
-            <li role="presentation"><a href="#">Seguidos</a></li>
-            <li role="presentation"><a href="#">Seguidores</a></li>
-          </ul>
-        </div>
-
-
     </div><!--container-->
-
     <!--Esta es la pantalla de las publicaciones (newsfeed)-->
-    <div class="container-fluid newsfeed">
+    <div class="container-fluid newsfeed hidden">
       <header>
         <div class="row">
-          <div class="col-xs-3">
-            <a href="#"><span><i class="fa fa-spinner" aria-hidden="true"></i></span></a>
+          <div class="col-xs-3 col-md-4">
+            <a id="homeLink" href="#"><span><i class="fa fa-spinner" aria-hidden="true"></i></span></a>
           </div>
-          <div class="col-xs-6">
+          <div class="col-xs-6 col-md-4">
             <img class="center-block" id="logo-verde" src="assets/img/logo-verde.png" alt="">
           </div>
-          <div class="col-xs-3">
-            <a href="#"><span><i class="fa fa-user-o" aria-hidden="true"></i></span></a>
+          <div class="col-xs-3 col-md-4">
+            <a id="userLink" href="#"><span><i class="fa fa-user-o" aria-hidden="true"></i></span></a>
           </div>
         </div>
       </header>
@@ -285,16 +260,19 @@
             </div>
           </div>
           <div class="col-xs-2 col-xs-offset-3">
-            <a href="#"><span><i class="fa fa-users" aria-hidden="true"></i></span></a>
+            <a id="followLink" href="#"><span><i class="fa fa-users" aria-hidden="true"></i></span></a>
           </div>
         </div>
       </footer>
     </div>
     <!--sección de los usuarios a los que sigo-->
-    <div class="follow">
+    <div class="container-fluid follow hidden">
       <div class="row">
-        <div class="col-xs-12">
-          <h3 class="text-center">Siguiendo</h3>
+        <div class="col-xs-6 col-md-3 col-md-offset-3">
+          <h3 class="text-center followTitle">Siguiendo</h3>
+        </div>
+        <div class="col-xs-6 col-md-3 ">
+          <a id="homeLinkFollow" href="#"><span><i class="fa fa-spinner" aria-hidden="true"></i></span></a>
         </div>
         <div class="user-follow">
           <div class="row">

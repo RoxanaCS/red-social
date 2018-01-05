@@ -7,7 +7,7 @@
   background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../img/initial-screen.jpg) no-repeat;
   background-size:cover;
   background-position: center;
-  height: 700px;
+  /*height: 700px;*/
   width: 100%;
   color: #fff;
 }
@@ -30,9 +30,7 @@
 }
 .logoCol{
   padding-top: 4em;
-
 }
-
 .form-control{
   margin-bottom: 1em;
 }
@@ -49,7 +47,6 @@
 .modal-header{
   text-align: center;
 }
-
 /*-----Estilos delperfil de usuario movil-----*/
 .userProfileMovil{
   height: 526px;
@@ -59,8 +56,9 @@
   background-color: darkgreen;
   vertical-align: center;
 }
-#imgPerfil{
-  width: 25em;
+.imgProfile{
+  width: 35%;
+  margin-bottom: 1em;
 }
 .perfilMovilTitle{
   font-size: 1.2em;
@@ -70,6 +68,7 @@ header{
   position: fixed;
   z-index: 5;
   background-color: #fff;
+  width: 100%;
 }
 section{
   margin-top: 6em;
@@ -78,7 +77,7 @@ footer{
 
 }
 #logo-verde{
-  width: 45%;
+  width: 5em;
   text-align: center;
 }
 span{
@@ -160,5 +159,9 @@ textarea {
   padding: 0.5em 1em;
   border-radius: 0.5em;
   font-size: 0.8em;
+  font-weight: bold;
+}
+.followTitle{
+  color: darkgreen;
   font-weight: bold;
 }
