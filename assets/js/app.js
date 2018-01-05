@@ -1,19 +1,17 @@
 //$( document ).ready(function() {
 //para usar firebase se pega este código
 // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyAqRUe-CuzmexneLSTEZbeufdbQsfDiFqk",
-    authDomain: "red-social-f9af1.firebaseapp.com",
-    databaseURL: "https://red-social-f9af1.firebaseio.com",
-    projectId: "red-social-f9af1",
-    storageBucket: "red-social-f9af1.appspot.com",
-    messagingSenderId: "157507274842"
-  };
-  firebase.initializeApp(config);
-
-  var imgDataPerfil = firebase.database().ref('usuarios');
-  var followData = firebase.database().ref('seguimientos');
-
+var config = {
+  apiKey: "AIzaSyAqRUe-CuzmexneLSTEZbeufdbQsfDiFqk",
+  authDomain: "red-social-f9af1.firebaseapp.com",
+  databaseURL: "https://red-social-f9af1.firebaseio.com",
+  projectId: "red-social-f9af1",
+  storageBucket: "red-social-f9af1.appspot.com",
+  messagingSenderId: "157507274842"
+};
+firebase.initializeApp(config);
+var imgDataPerfil = firebase.database().ref('usuarios');
+var followData = firebase.database().ref('seguimientos');
 //Esto es para autenticar un usuario registrado
 window.onload = inicializar;
 var formAutenticacion;
@@ -54,8 +52,7 @@ function autentificar(event){
         var Objeto = e.val();
         //console.log(Objeto.seguido);
         if(Objeto.imgProfile!=null){
-          $("#profile").append('<div class="col-xs-12"><img class="col-xs-12 img-thumbnail margen-img" src="' + Objeto.imgProfile + '"/><p class="col-xs-6 color-user">' + Objeto.description + '</p><p class="col-xs-12"></p></div>')
-
+          $("#profile").append('<img class="col-xs-12 img-circle imgProfile center-block" src="' + Objeto.imgProfile + '"/><p class="col-xs-12 color-user text-center">' + Objeto.description + '</p>')
         }
       });
     });
@@ -82,9 +79,22 @@ function registrar(){
   		//alert("Autenticación correcta");
   		$('#myModal').modal('hide');
   		$('.first-screen').addClass('hidden');
-    	$('.userProfileMovil').removeClass('hidden');
-      userLoged = usuario;
-	})
+    	$('.newsfeed').removeClass('hidden');
+      userLoged = emailReg;
+      //añadir los datos al perfil
+      $("#profile").append('<img class="col-xs-12 img-circle imgProfile center-block" src="' + imgProfile + '"/><p class="col-xs-12 color-user">' + description + '</p>')
+      //para cargar los seguidos del usuario
+      followData.orderByChild("seguidor").equalTo(userLoged).on("value", function(snapshot){
+        $('#div-follow').html(''); //limpiamos el contenedor
+        snapshot.forEach(function(e){
+          var Objeto = e.val();
+          //console.log(Objeto.seguido);
+          if(Objeto.seguido!=null){
+          $('#div-follow').append('<div class="col-xs-12"><p>' + Objeto.seguido + '</p></div>')
+          }
+        });
+      });
+  })
 	//Esto es en caso de error
 	.catch(function(error) {
   // Handle Errors here.
@@ -122,6 +132,7 @@ $('#upload-profile').change(function(){
     archivo.readAsDataURL(this.files[0]);
   }
 })
+<<<<<<< HEAD
 
 //var ref = new Firebase("https://red-social-f9af1.firebaseio.com");
 //var user = {
@@ -136,6 +147,8 @@ $('#upload-profile').change(function(){
 	//}
 //});
 
+=======
+>>>>>>> 16b184410308a62b0fdab6479e1ee9e15e27a670
 //para subir imagenes a la web
 var urlLarge = 'none';
 $('#upload-file-selector').change(function(){
@@ -178,7 +191,7 @@ imgData.on('value', function(snapshot){
     var Objeto = e.val();
     //console.log(Objeto.urlLarge);
     if(Objeto.urlLarge!=null){
-      $("#divImg").append('<div class="col-xs-12 box-post"><p class="col-xs-6 color-user">' + Objeto.user + '</p><button class="col-xs-3 btnSeguir" type="button" value="' + Objeto.user + '">Seguir</button><h4 class="col-xs-12">' + Objeto.comentario + '</h4><img class="col-xs-12 img-thumbnail margen-img" src="' + Objeto.urlLarge + '"/></div>')
+      $("#divImg").append('<div class="col-xs-12 box-post"><p class="col-xs-12 col-md-6 color-user">' + Objeto.user + '</p><button class="col-xs-3 col-md-3 btnSeguir" type="button" value="' + Objeto.user + '">Seguir</button><h4 class="col-xs-12">' + Objeto.comentario + '</h4><img class="col-xs-12 img-thumbnail margen-img" src="' + Objeto.urlLarge + '"/></div>')
     }
     })
 })
@@ -201,24 +214,49 @@ imgData.on('value', function(snapshot){
       seguidor: userLoged
     })
   });
-    //alert (valor);
-
-
 //filtro por region
 $("#region-menu").on('input', function(){
   var selectRegion = $("#region-menu option:selected").val();
-  //if ()
-  imgData.orderByChild("region").equalTo(selectRegion).on("value", function(snapshot){
-    //console.log(snapshot.key);
-    $('#divImg').html(''); //limpiamos el contenedor
-    snapshot.forEach(function(e){
-      var Objeto = e.val();
-      console.log(Objeto.urlLarge);
-      if(Objeto.urlLarge!=null){
-        $('#divImg').append('<div class="col-xs-12"><p>' + Objeto.user + '</p><h3>' + Objeto.comentario + '</h3><img class="col-xs-12 img-thumbnail" height="10%" width="10%" src="' + Objeto.urlLarge + '"/></div>')
-      }
+  if(selectRegion == "Seleccion"){
+    imgData.on('value', function(snapshot){
+      $('#divImg').html(''); //limpiamos el contenedor
+        snapshot.forEach(function(e){
+        var Objeto = e.val();
+        //console.log(Objeto.urlLarge);
+        if(Objeto.urlLarge!=null){
+          $("#divImg").append('<div class="col-xs-12 box-post"><p class="col-xs-12 col-md-6 color-user">' + Objeto.user + '</p><button class="col-xs-3 col-md-3 btnSeguir" type="button" value="' + Objeto.user + '">Seguir</button><h4 class="col-xs-12">' + Objeto.comentario + '</h4><img class="col-xs-12 img-thumbnail margen-img" src="' + Objeto.urlLarge + '"/></div>')
+        }
+        })
     })
-  });
+  }else{
+    imgData.orderByChild("region").equalTo(selectRegion).on("value", function(snapshot){
+      //console.log(snapshot.key);
+      $('#divImg').html(''); //limpiamos el contenedor
+      snapshot.forEach(function(e){
+        var Objeto = e.val();
+        console.log(Objeto.urlLarge);
+        if(Objeto.urlLarge!=null){
+          $('#divImg').append('<div class="col-xs-12"><p>' + Objeto.user + '</p><h3>' + Objeto.comentario + '</h3><img class="col-xs-12 img-thumbnail" height="10%" width="10%" src="' + Objeto.urlLarge + '"/></div>')
+        }
+      })
+    });
+  }
 });
-
+//cambiar de pantalla segun el icono
+$('#userLink').click(function(){
+  $('.newsfeed').addClass('hidden');
+  $('.userProfileMovil').removeClass('hidden');
+})
+$('#homeLink').click(function(){
+  $('.userProfileMovil').addClass('hidden');
+  $('.newsfeed').removeClass('hidden');
+})
+$('#homeLinkFollow').click(function(){
+  $('.follow').addClass('hidden');
+  $('.newsfeed').removeClass('hidden');
+})
+$('#followLink').click(function(){
+  $('.newsfeed').addClass('hidden');
+  $('.follow').removeClass('hidden');
+})
 //});
