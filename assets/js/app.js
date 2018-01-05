@@ -83,7 +83,18 @@ function registrar(){
       userLoged = emailReg;
       //añadir los datos al perfil
       $("#profile").append('<img class="col-xs-12 img-circle imgProfile center-block" src="' + imgProfile + '"/><p class="col-xs-12 color-user">' + description + '</p>')
-	})
+      //para cargar los seguidos del usuario
+      followData.orderByChild("seguidor").equalTo(userLoged).on("value", function(snapshot){
+        $('#div-follow').html(''); //limpiamos el contenedor
+        snapshot.forEach(function(e){
+          var Objeto = e.val();
+          //console.log(Objeto.seguido);
+          if(Objeto.seguido!=null){
+          $('#div-follow').append('<div class="col-xs-12"><p>' + Objeto.seguido + '</p></div>')
+          }
+        });
+      });
+  })
 	//Esto es en caso de error
 	.catch(function(error) {
   // Handle Errors here.
