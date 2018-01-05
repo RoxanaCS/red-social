@@ -118,6 +118,21 @@ textarea {
   color: #0F7C5A;
   font-weight: bold;
 }
+.btnProfile{
+  border: 0.1em solid gray;
+  color: gray;
+  background-color: white;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  font-weight: bold;
+  font-size: 0.3em;
+}
+.btnProfile input[type=file] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
 .btnUpload {
   border: 0.1em solid gray;
   color: gray;
@@ -128,7 +143,6 @@ textarea {
   font-weight: bold;
 }
 .btnUpload input[type=file] {
-  font-size: 10em;
   position: absolute;
   left: 0;
   top: 0;
