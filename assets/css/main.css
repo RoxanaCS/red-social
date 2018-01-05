@@ -23,19 +23,16 @@
 }
 /*-----Estilos segunda columna-----*/
 .secondCol{
-  padding-left: 8em;
+  padding-left: 4em;
 }
 #form-autenticacion{
   padding-top: 4em;
 }
 .logoCol{
   padding-top: 4em;
-  padding-left: ;
+
 }
-.logoColXs{
-  padding-top: 3em;
-  padding-left: 1em;
-}
+
 .form-control{
   margin-bottom: 1em;
 }
@@ -49,9 +46,11 @@
   border: none;
   color: #fff;
 }
+.modal-header{
+  text-align: center;
+}
 
-
-/*-----Estilos delperfil de usuario mobile-----*/
+/*-----Estilos delperfil de usuario movil-----*/
 .userProfileMovil{
   height: 526px;
 }
