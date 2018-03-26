@@ -102,25 +102,8 @@ function registrar(){
     var errorMessage = error.message;
   // ...
 });
-}
 
-//Esto es para el botón logout
-function aparece(){
-	var contenido = document.getElementById('contenido');
-	contenido.innerHTML = `
-	<button onclick="cerrar()">Cerrar sesión</button>
-	`;
 }
-function cerrar(){
-	firebase.auth().signOut()
-	.then(function(){
-		console.log('Saliendo...')
-	});
-	.catch(function(error){
-		console.log(error)
-	});
-}
-
 //imagen de perfil
 $('#upload-profile').change(function(){
   if(this.files && this.files[0]){
@@ -132,23 +115,6 @@ $('#upload-profile').change(function(){
     archivo.readAsDataURL(this.files[0]);
   }
 })
-<<<<<<< HEAD
-
-//var ref = new Firebase("https://red-social-f9af1.firebaseio.com");
-//var user = {
-	//email:
-	//password:
-//};
-//ref.createUser(user, function(error){
-	//if (error){
-		//console.log(error);
-	//} else {
-		//console.log("Tu usuario se ha registrado");
-	//}
-//});
-
-=======
->>>>>>> 16b184410308a62b0fdab6479e1ee9e15e27a670
 //para subir imagenes a la web
 var urlLarge = 'none';
 $('#upload-file-selector').change(function(){
