@@ -106,7 +106,7 @@
                               <input type="password" class="form-control" id="passwordRegistro" placeholder="Password">
                             </div>
                             <span id="fileSelector">
-                              <label class="btnProfile btn-default" for="upload-profile">
+                              <label class="btnProfile btn" for="upload-profile">
                                 <input id="upload-profile" type="file" accept="image/x-png, image/gif, image/jpeg">
                                 <i class="fa fa-upload" aria-hidden="true"></i>Sube tu foto de perfil
                               </label>
@@ -117,7 +117,7 @@
                           </form>
                         </div>
                         <div class="modal-footer">
-                          <button type="reset" class="btn btn-default" id="botonEnviar" onclick="registrar()">Enviar</button>
+                          <button type="reset" class="btn" id="botonEnviar" onclick="registrar()">Enviar</button>
                         </div>
                       </div>
                     </div>
@@ -143,14 +143,14 @@
     <!--Esta es la pantalla de las publicaciones (newsfeed)-->
     <div class="container-fluid newsfeed hidden">
       <header>
-        <div class="row">
+        <div class="row header-row">
           <div class="col-xs-3 col-md-4">
             <a id="homeLink" href="#"><span><i class="fa fa-spinner" aria-hidden="true"></i></span></a>
           </div>
           <div class="col-xs-6 col-md-4">
             <img class="center-block" id="logo-verde" src="assets/img/logo-verde.png" alt="">
           </div>
-          <div class="col-xs-3 col-md-4">
+          <div class="col-xs-3 col-xs-offset-0 col-md-offset-3 col-md-1">
             <a id="userLink" href="#"><span><i class="fa fa-user-o" aria-hidden="true"></i></span></a>
           </div>
         </div>
@@ -180,84 +180,84 @@
            </div>
          </div>
           <!-- mostrar publicaciones subidas a firebase -->
-        <div class="row">
+        <div class="row news">
           <div class="col-xs-12 col-md-6 col-md-offset-3">
             <div id="divImg"></div>
           </div>
         </div>
       </section>
       <footer>
-        <div class="row">
-          <div class="col-xs-2 col-xs-offset-3">
+        <div class="row footer-row footer navbar-fixed-bottom">
+          <div class="col-xs-2 col-xs-offset-1 col-md-2 col-md-offset-3">
             <a href="#modal-post" class="btn" data-toggle="modal"><span><i class="fa fa-camera" aria-hidden="true"></i></span></a>
           </div>
-          <!-- modal para ingresar la experiencia -->
-          <div class="modal fade" id="modal-post" tabindex="-1" role="dialog" aria-labelledby="modal-postLabel">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button tyle="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                </div>
-                <div class="modal-body">
-                  <!--selector de regiones-->
-                  <div class="row">
-                   <div class="col-xs-12">
-                     <select class="form-control" id="region-menu-modal">
-                       <option value="Seleccion">¿Qué región visitaste?</option>
-                       <option value="Arica">XV - Arica y Parinacota</option>
-                       <option value="Tarapaca">I - Tarapacá</option>
-                       <option value="Antofagasta">II - Antofagasta</option>
-                       <option value="Atacama">III - Atacama</option>
-                       <option value="Coquimbo">IV - Coquimbo</option>
-                       <option value="Valparaíso">V - Valparaíso</option>
-                       <option value="Ohhigins">VI - O'Higgins</option>
-                       <option value="Maule">VII - Maule</option>
-                       <option value="Biobio">VIII - Biobío</option>
-                       <option value="Araucania">IX - Araucanía</option>
-                       <option value="LosRios">XIV - Los Ríos</option>
-                       <option value="LosLagos">X - Los Lagos</option>
-                       <option value="Aysen">XI - Aysén</option>
-                       <option value="Magallanes">XII - Magallanes</option>
-                       <option value="Metropolitana">RM - Metropolitana de Santiago</option>
-                     </select>
-                   </div>
-                 </div>
-                  <!--textarea para escribir la publicación-->
-                  <div class="row">
-                    <div class="col-xs-6">
-                      <textarea class="txt" id="comment" placeholder="Cuéntanos tu experiencia..."></textarea>
-                    </div>
-                  <!--región de muestra de la imagen-->
-                    <div class="col-xs-6 text-center">
-                      <span id="fileSelector">
-                        <label class="btnUpload btn-default" for="upload-file-selector">
-                          <input id="upload-file-selector" type="file" accept="image/x-png, image/gif, image/jpeg">
-                          <i class="fa fa-upload" aria-hidden="true"></i>Subir Imagen
-                        </label>
-                      </span>
-                    </div>
-                  </div>
-                  <!-- para seleccionar la imagen-->
-                  <div class="row">
-                    <div class="col-xs-12 text-center">
-                      <img id="imgLoad" src="img/no-image.png" alt="">
-                    </div>
-                  </div>
-                <!-- para cargar la imagen a firebase-->
-                  <div class="row">
-                    <div class="col-xs-6 col-xs-offset-7 col-md-3 col-md-offset-9">
-                      <button class="btnData btn-primary" type="button" name="button">Agregar</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-2 col-xs-offset-3">
+          <div class="col-xs-2 col-xs-offset-5 col-md-2 col-md-offset-3">
             <a id="followLink" href="#"><span><i class="fa fa-users" aria-hidden="true"></i></span></a>
           </div>
         </div>
       </footer>
+    </div>
+    <!-- modal para ingresar la experiencia -->
+    <div class="modal fade" id="modal-post" tabindex="-1" role="dialog" aria-labelledby="modal-postLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button tyle="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+          <div class="modal-body">
+            <!--selector de regiones-->
+            <div class="row">
+             <div class="col-xs-12">
+               <select class="form-control" id="region-menu-modal">
+                 <option value="Seleccion">¿Qué región visitaste?</option>
+                 <option value="Arica">XV - Arica y Parinacota</option>
+                 <option value="Tarapaca">I - Tarapacá</option>
+                 <option value="Antofagasta">II - Antofagasta</option>
+                 <option value="Atacama">III - Atacama</option>
+                 <option value="Coquimbo">IV - Coquimbo</option>
+                 <option value="Valparaíso">V - Valparaíso</option>
+                 <option value="Ohhigins">VI - O'Higgins</option>
+                 <option value="Maule">VII - Maule</option>
+                 <option value="Biobio">VIII - Biobío</option>
+                 <option value="Araucania">IX - Araucanía</option>
+                 <option value="LosRios">XIV - Los Ríos</option>
+                 <option value="LosLagos">X - Los Lagos</option>
+                 <option value="Aysen">XI - Aysén</option>
+                 <option value="Magallanes">XII - Magallanes</option>
+                 <option value="Metropolitana">RM - Metropolitana de Santiago</option>
+               </select>
+             </div>
+           </div>
+            <!--textarea para escribir la publicación-->
+            <div class="row">
+              <div class="col-xs-6 col-md-8">
+                <textarea class="txt" id="comment" placeholder="Cuéntanos tu experiencia..."></textarea>
+              </div>
+            <!--región de muestra de la imagen-->
+              <div class="col-xs-6 col-md-4 text-center">
+                <span id="fileSelector">
+                  <label class="btnUpload btn" for="upload-file-selector">
+                    <input id="upload-file-selector" type="file" accept="image/x-png, image/gif, image/jpeg">
+                    <i class="fa fa-upload" aria-hidden="true"></i>Subir Imagen
+                  </label>
+                </span>
+              </div>
+            </div>
+            <!-- para seleccionar la imagen-->
+            <div class="row">
+              <div class="col-xs-12 text-center">
+                <img id="imgLoad" src="img/no-image.png" alt="">
+              </div>
+            </div>
+          <!-- para cargar la imagen a firebase-->
+            <div class="row">
+              <div class="col-xs-6 col-xs-offset-7 col-md-3 col-md-offset-9">
+                <button class="btnData btn" type="button" name="button">Agregar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!--sección de los usuarios a los que sigo-->
     <div class="container-fluid follow hidden">

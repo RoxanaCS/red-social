@@ -33,6 +33,7 @@
 }
 .form-control{
   margin-bottom: 1em;
+  color: darkgreen;
 }
 .loginButtons{
   padding-top: ;
@@ -46,6 +47,10 @@
 }
 .modal-header{
   text-align: center;
+}
+#description{
+  border: 1px solid darkgreen;
+  border-radius: 2px;
 }
 /*-----Estilos delperfil de usuario movil-----*/
 .logoVerdePerfil{
@@ -74,11 +79,21 @@ header{
   background-color: #fff;
   width: 100%;
 }
+.header-row{
+  background-color: #fff;
+  width: 100%;
+}
 section{
   margin-top: 6em;
 }
-footer{
-
+.news{
+  margin-bottom: 5em;
+}
+.footer-row{
+  background-color: #fff;
+  /* position: fixed;
+  bottom: 0;  */
+  /* width: 100%; */
 }
 #logo-verde{
   width: 5em;
@@ -120,11 +135,12 @@ textarea {
 .color-user{
   color: #0F7C5A;
   font-weight: bold;
+  font-size: 1em;
 }
 .btnProfile{
-  border: 0.1em solid gray;
-  color: gray;
-  background-color: white;
+  border: none;
+  color: white;
+  background-color: darkgreen;
   padding: 0.5em 1em;
   border-radius: 0.5em;
   font-weight: bold;
@@ -137,13 +153,12 @@ textarea {
   opacity: 0;
 }
 .btnUpload {
-  border: 0.1em solid gray;
-  color: gray;
+  border: 1px solid darkgreen;
+  color: darkgreen;
   background-color: white;
   padding: 0.5em 1em;
   border-radius: 0.5em;
   font-size: 30%;
-  font-weight: bold;
 }
 .btnUpload input[type=file] {
   position: absolute;
@@ -151,19 +166,26 @@ textarea {
   top: 0;
   opacity: 0;
 }
+#botonEnviar{
+  color: white;
+  background-color: darkgreen;
+}
 .btnData{
-  border: 0.1em solid gray;
+  border: none;
   padding: 0.5em 1em;
   border-radius: 0.5em;
   font-size: 1em;
   font-weight: bold;
+  color: white;
+  background-color: darkgreen;
 }
 .btnSeguir{
-  border: 0.1em solid gray;
-  padding: 0.5em 1em;
+  border: none;
+  padding: 0.5em 0.5em;
   border-radius: 0.5em;
   font-size: 0.8em;
-  font-weight: bold;
+  background-color: darkgreen;
+  color: white;
 }
 .followTitle{
   color: darkgreen;

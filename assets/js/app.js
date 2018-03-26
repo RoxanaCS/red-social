@@ -157,7 +157,7 @@ imgData.on('value', function(snapshot){
     var Objeto = e.val();
     //console.log(Objeto.urlLarge);
     if(Objeto.urlLarge!=null){
-      $("#divImg").append('<div class="col-xs-12 box-post"><p class="col-xs-12 col-md-6 color-user">' + Objeto.user + '</p><button class="col-xs-3 col-md-3 btnSeguir" type="button" value="' + Objeto.user + '">Seguir</button><h4 class="col-xs-12">' + Objeto.comentario + '</h4><img class="col-xs-12 img-thumbnail margen-img" src="' + Objeto.urlLarge + '"/></div>')
+      $("#divImg").append('<div class="col-xs-12 box-post"><p class="col-xs-12 col-md-9 color-user">' + Objeto.user + '</p><button class="col-xs-3 col-md-3 btnSeguir" type="button" value="' + Objeto.user + '">Seguir</button><h4 class="col-xs-12">' + Objeto.comentario + '</h4><img class="col-xs-12 img-thumbnail margen-img" src="' + Objeto.urlLarge + '"/></div>')
     }
     })
 })
